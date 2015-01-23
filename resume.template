@@ -5,11 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{basics.firstName}} {{basics.lastName}}</title>
-    <link href="http://bootswatch.com/lumen/bootstrap.min.css" rel="stylesheet" />
+      <link href="http://bootswatch.com/journal/bootstrap.min.css" rel="stylesheet" />
    <style>
     .interest-item {
       line-height: 26px;
     }
+
+    @media print {
+      a[href] {
+        text-decoration: underline !important;
+        color: #e22620 !important;
+      }
+      a[href]:after {
+        content: none !important;
+      }
+    }
+
    </style>
   
   </head>
