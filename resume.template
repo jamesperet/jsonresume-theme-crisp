@@ -41,10 +41,10 @@
         content: none !important;
       }
       p, strong, li, body {
-        color: #aaa !important;
+        color: #999 !important;
       }
       h4.institution-name {
-          color: #aaa !important;
+          color: #999 !important;
       }
     }
 
