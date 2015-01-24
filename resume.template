@@ -5,26 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{basics.firstName}} {{basics.lastName}}</title>
-      <link href="http://bootswatch.com/journal/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://bootswatch.com/journal/bootstrap.css" type="text/css" />
+
    <style>
+
+    p.basics-summary {
+      margin: 15px 0 !important;
+    }
+    p.basics-contact {
+      margin: 0 !important;
+    }
+    h3 {
+      margin-top: 10px !important;
+    }
+    h3.section-heading {
+      color: #ef541d !important;    
+    }
+    h4.institution-name {
+        color: #777 !important;
+    }
     .interest-item {
       line-height: 26px;
+    }
+    a[href] {
+      /* text-decoration: underline !important; */
+      color: #ef541d !important;
     }
 
     @media print {
       a[href] {
         text-decoration: underline !important;
-        color: #e22620 !important;
+        color: #ef541d !important;
       }
       a[href]:after {
         content: none !important;
+      }
+      p, strong, li, body {
+        color: #aaa !important;
+      }
+      h4.institution-name {
+          color: #aaa !important;
       }
     }
 
    </style>
   
   </head>
-
 
   <body>
     <div class="container">
@@ -38,34 +64,34 @@
         {{#basics.gravatar}}    
         <div class="col-md-6 col-sm-12">
 	        <img class="media-object img-circle pull-right" data-src="holder.js/64x64" alt="64x64" src="{{basics.gravatar}}" style="width: 100px; height: 100px; margin-top: 20px;">
-	    </div>
-		{{/basics.gravatar}}    
+  	    </div>
+  		  {{/basics.gravatar}}    
         </div>
-      <hr style="color: #ccc; height: 4px;" />
+      <hr />
       <section class="row">
         <header class="col-md-3">
-          <h3>About</h3>
+          <h3 class="section-heading">About</h3>
         </header>
         <div class="col-md-9">
-        <p>{{basics.summary}}</p>
+        <p class="basics-summary">{{basics.summary}}</p>
         {{#basics.phone}}
-        <strong>Phone:</strong> {{basics.phone}} <br />
+        <p class="basics-contact"><strong>Phone:</strong> {{basics.phone}}</p>
         {{/basics.phone}}
         {{#basics.email}}
-        <strong>Email:</strong> {{basics.email}}<br />
+        <p class="basics-contact"><strong>Email:</strong> {{basics.email}}</p>
         {{/basics.email}}
         {{#profiles.twitter}}
-        <strong>Twitter:</strong> <a href="http://twitter.com/{{.}}">{{.}}</a><br />
+        <p class="basics-contact"><strong>Twitter:</strong> <a href="http://twitter.com/{{.}}">{{.}}</a></p>
         {{/profiles.twitter}}
         {{#profiles.github}}
-        <strong>Github:</strong> <a href="http://github.com/{{.}}">{{.}}</a><br />
+        <p class="basics-contact"><strong>Github:</strong> <a href="http://github.com/{{.}}">{{.}}</a></p>
         {{/profiles.github}}<hr />
         </div>
       </section>
       {{#work.length}}
       <section class="row">
         <header class="col-md-3">
-          <h3>Work Experience</h3>
+          <h3 class="section-heading">Work Experience</h3>
         </header>
         <div class="col-md-9">
           <div class="skills">
@@ -88,14 +114,14 @@
       {{#education.length}}
       <section class="row">
         <header class="col-md-3">
-          <h3>Education</h3>
+          <h3 class="section-heading">Education</h3>
         </header>
         <div class="col-md-9">
           <div class="skills">
             {{#education}}
             <h3>{{studyType}}</h3>
-            <h4><i>{{area}}</i></h4>
-            <h4>{{institution}}</h4>
+            <h4>{{area}}</h4>
+            <h4 class="institution-name">{{institution}}</h4>
             <p>{{endDateYear}}</p>
             {{#summary}}
             <p>{{summary}}</p>
@@ -115,12 +141,12 @@
       {{#publications.length}}
       <section class="row">
         <header class="col-md-3">
-          <h3>Projects</h3>
+          <h3 class="section-heading">Projects</h3>
         </header>
         <div class="col-md-9">
           <div class="skills">
             {{#publications}}
-            <h3>{{name}}</h3>
+            <h4>{{name}}</h4>
             <p><a href="{{website}}">{{website}}</a></p>
             <p>{{summary}}</p>
             <hr />{{/publications}}
@@ -132,7 +158,7 @@
       {{#skills.length}}
       <section class="row">
         <header class="col-md-3">
-          <h3>Skills</h3>
+          <h3 class="section-heading">Skills</h3>
         </header>
         <div class="col-md-9">
           <div class="row-fluid skills">
@@ -157,7 +183,7 @@
       {{#linkedInterests.length}}
       <section class="row">
         <header class="col-md-3">
-          <h3>Interests</h3>
+          <h3 class="section-heading">Interests</h3>
         </header>
         <div class="col-md-9">
             <ul>
@@ -179,7 +205,7 @@
       {{#references.length}}
       <section class="row">
         <header class="col-md-3">
-          <h3>References</h3>
+          <h3 class="section-heading">References</h3>
         </header>
         <div class="col-md-9">
           <div class="row-fluid skills">
