@@ -1,11 +1,11 @@
 {
-  "name": "jsonresume-theme-futura",
-  "version": "0.1.4",
-  "description": "Theme for JSON Resume based on Modern",
-  "author": "Mark Andrews",
+  "name": "jsonresume-theme-crisp",
+  "version": "0.1.0",
+  "description": "Theme for JSON Resume based on Futura",
+  "author": "James Peret",
   "repository": {
     "type": "git",
-    "url": "https://github.com/markau/jsonresume-theme-futura"
+    "url": "https://github.com/jamesperet/jsonresume-theme-crisp"
   },
   "license": "MIT",
   "dependencies": {

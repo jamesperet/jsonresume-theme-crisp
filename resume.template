@@ -19,7 +19,7 @@
       margin-top: 10px !important;
     }
     h3.section-heading {
-      color: #ef541d !important;    
+      color: #ef541d !important;
     }
     h4.institution-name {
         color: #777 !important;
@@ -49,7 +49,7 @@
     }
 
    </style>
-  
+
   </head>
 
   <body>
@@ -61,11 +61,11 @@
 	        <h1>{{basics.name}}<h1>
 	        <h2>{{basics.location.city}}</h2>
         </div>
-        {{#basics.gravatar}}    
+        {{basics.gravatar}}    
         <div class="col-md-6 col-sm-12">
 	        <img class="media-object img-circle pull-right" data-src="holder.js/64x64" alt="64x64" src="{{basics.gravatar}}" style="width: 100px; height: 100px; margin-top: 20px;">
   	    </div>
-  		  {{/basics.gravatar}}    
+  		  {{/basics.gravatar}}
         </div>
       <hr />
       <section class="row">
@@ -109,7 +109,7 @@
           </div>
         </div>
       </section>
-      {{/work.length}} 
+      {{/work.length}}
 
       {{#education.length}}
       <section class="row">
@@ -136,7 +136,7 @@
           </div>
         </div>
       </section>
-      {{/education.length}} 
+      {{/education.length}}
 
       {{#publications.length}}
       <section class="row">
@@ -153,7 +153,7 @@
           </div>
         </div>
       </section>
-      {{/publications.length}} 
+      {{/publications.length}}
 
       {{#skills.length}}
       <section class="row">
@@ -200,7 +200,7 @@
             <hr />
         </div>
       </section>
-      {{/linkedInterests.length}} 
+      {{/linkedInterests.length}}
 
       {{#references.length}}
       <section class="row">
