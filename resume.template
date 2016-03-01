@@ -83,11 +83,11 @@
         {{#basics.website}}
         <p class="basics-contact"><strong>Website:</strong> {{basics.website}}</p>
         {{/basics.website}}
-        {{#profiles.length}}
-          {{#profiles}}
+        {{#basics.profiles.length}}
+          {{#basics.profiles}}
           <p class="basics-contact"><strong>{{network}}:</strong> <a href="{{url}}">{{url}}</a></p>
-          {{/profiles}}
-        {{/profiles.length}}
+          {{/basics.profiles}}
+        {{/basics.profiles.length}}
         <hr />
         </div>
       </section>
