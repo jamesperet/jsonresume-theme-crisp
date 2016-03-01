@@ -63,7 +63,7 @@
         </div>
         {{#basics.picture}}
         <div class="col-md-6 col-sm-12">
-	        <img class="media-object img-circle pull-right" data-src="holder.js/64x64" alt="64x64" src="{{basics.gravatar}}" style="width: 100px; height: 100px; margin-top: 20px;">
+	        <img class="media-object img-circle pull-right" data-src="holder.js/64x64" alt="64x64" src="{{basics.picture}}" style="width: 100px; height: 100px; margin-top: 20px;">
   	    </div>
   		  {{/basics.picture}}
         </div>
@@ -180,7 +180,27 @@
       </section>
       {{/skills.length}}
 
-
+      {{#linkedInterests.length}}
+      <section class="row">
+        <header class="col-md-3">
+          <h3 class="section-heading">Interests</h3>
+        </header>
+        <div class="col-md-9">
+            <ul>
+            {{#linkedInterests}}
+              <li class="interest-item">{{name}}
+              {{#interestWebsiteName}}
+                {{#interestWebsiteUrl}}
+                (<a href="{{interestWebsiteUrl}}">{{interestWebsiteName}}</a>)
+                {{/interestWebsiteUrl}}
+              {{/interestWebsiteName}}
+              </li>
+            {{/linkedInterests}}
+            </ul>
+            <hr />
+        </div>
+      </section>
+      {{/linkedInterests.length}}
 
       {{#references.length}}
       <section class="row">
