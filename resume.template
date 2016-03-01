@@ -78,11 +78,12 @@
         <p class="basics-contact"><strong>Phone:</strong> {{basics.phone}}</p>
         {{/basics.phone}}
         {{#basics.email}}
-        <p class="basics-contact"><strong>Email:</strong> {{basics.email}}</p>
+        <p class="basics-contact"><strong>Email:</strong> <a href="mailto:{{{basics.email}}">{{basics.email}}</a></p>
         {{/basics.email}}
         {{#basics.website}}
-        <p class="basics-contact"><strong>Website:</strong> {{basics.website}}</p>
+        <p class="basics-contact"><strong>Website:</strong> <a href="{{basics.website}}">{{basics.website}}</a><br></p>
         {{/basics.website}}
+        <br>
         {{#basics.profiles.length}}
           {{#basics.profiles}}
           <p class="basics-contact"><strong>{{network}}:</strong> <a href="{{url}}">{{url}}</a></p>
