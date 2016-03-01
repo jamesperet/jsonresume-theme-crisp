@@ -61,11 +61,6 @@
 	        <h1>{{basics.name}}<h1>
 	        <h2>{{basics.location.city}}</h2>
         </div>
-        {{#basics.gravatar}}
-        <div class="col-md-6 col-sm-12">
-	        <img class="media-object img-circle pull-right" data-src="holder.js/64x64" alt="64x64" src="{{basics.gravatar}}" style="width: 100px; height: 100px; margin-top: 20px;">
-  	    </div>
-  		  {{/basics.gravatar}}
         {{#basics.picture}}
         <div class="col-md-6 col-sm-12">
 	        <img class="media-object img-circle pull-right" data-src="holder.js/64x64" alt="64x64" src="{{basics.picture}}" style="width: 100px; height: 100px; margin-top: 20px;">
@@ -88,6 +83,9 @@
         {{#profiles.twitter}}
         <p class="basics-contact"><strong>Twitter:</strong> <a href="http://twitter.com/{{.}}">{{.}}</a></p>
         {{/profiles.twitter}}
+        {{#profiles.vimeo}}
+        <p class="basics-contact"><strong>Vimeo:</strong> <a href="http://vimeo.com/{{.}}">{{.}}</a></p>
+        {{/profiles.vimeo}}<hr />
         {{#profiles.github}}
         <p class="basics-contact"><strong>Github:</strong> <a href="http://github.com/{{.}}">{{.}}</a></p>
         {{/profiles.github}}<hr />
