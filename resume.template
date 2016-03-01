@@ -180,27 +180,7 @@
       </section>
       {{/skills.length}}
 
-      {{#linkedInterests.length}}
-      <section class="row">
-        <header class="col-md-3">
-          <h3 class="section-heading">Interests</h3>
-        </header>
-        <div class="col-md-9">
-            <ul>
-            {{#linkedInterests}}
-              <li class="interest-item">{{name}}
-              {{#interestWebsiteName}}
-                {{#interestWebsiteUrl}}
-                (<a href="{{interestWebsiteUrl}}">{{interestWebsiteName}}</a>)
-                {{/interestWebsiteUrl}}
-              {{/interestWebsiteName}}
-              </li>
-            {{/linkedInterests}}
-            </ul>
-            <hr />
-        </div>
-      </section>
-      {{/linkedInterests.length}}
+
 
       {{#references.length}}
       <section class="row">
