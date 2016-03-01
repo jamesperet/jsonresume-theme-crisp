@@ -9,7 +9,7 @@ function render(resumeObject) {
 		w.startDateYear = w.startDate.substr(0,4);
 		if(w.endDate) {
 			w.endDateYear = w.endDate.substr(0,4);
-		} else { 
+		} else {
 			w.endDateYear = 'Present'
 		}
 	});
@@ -19,7 +19,7 @@ function render(resumeObject) {
 			e.startDateYear = e.startDate.substr(0,4);
 			if(e.endDate) {
 				e.endDateYear = e.endDate.substr(0,4);
-			}  else { 
+			}  else {
 				e.endDateYear = 'Present'
 			}
 	    } else {
@@ -31,19 +31,13 @@ function render(resumeObject) {
 	resumeObject.linkedInterests = [];
 	_.each(resumeObject.interests, function(interest){
     	resumeObject.linkedInterests.push({
-    		"name": interest.name, 
-    		"interestWebsiteName": interest.keywords[0] || '', 
+    		"name": interest.name,
+    		"interestWebsiteName": interest.keywords[0] || '',
     		"interestWebsiteUrl": interest.keywords[1] || ''
     	});
 	});
 
-	if(resumeObject.basics && resumeObject.basics.email && useGravatar) {
-		resumeObject.basics.gravatar = gravatar.url(resumeObject.basics.email, {
-                        s: '100',
-                        r: 'pg',
-                        d: 'mm'
-                    });
-	}
+
 	resumeObject.profiles = {};
 
 	_.each(resumeObject.basics.profiles, function(profile){
@@ -52,7 +46,7 @@ function render(resumeObject) {
 	console.log(resumeObject.profiles);
 	var theme = fs.readFileSync(__dirname + '/resume.template', 'utf8');
 	var resumeHTML = Mustache.render(theme, resumeObject);
-	
+
 
 	return resumeHTML;
 };
