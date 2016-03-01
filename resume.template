@@ -57,6 +57,7 @@
         font-size: 3em;
         margin-top: 100px;
         margin-bottom: 20px;
+        padding-top: 30px;
       }
       h4 {
         font-size: 2em;
@@ -66,6 +67,17 @@
         color: #999 !important;
         margin-top: 25px;
         margin-bottom: 8px;
+      }
+      h4.education-area {
+        font-size: 1.5em;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      h4.institution-name {
+        font-size: 1.5em;
+        margin-top: 5px;
+        margin-bottom: 25px;
+        color: #999 !important;
       }
       hr {
         display: none;
@@ -148,7 +160,7 @@
           <div class="skills">
             {{#education}}
             <h3 class="education-type">{{studyType}}</h3>
-            <h4>{{area}}</h4>
+            <h4 class="education-area">{{area}}</h4>
             <h4 class="institution-name">{{institution}}</h4>
             <p>{{endDateYear}}</p>
             {{#summary}}
