@@ -37,7 +37,13 @@ function render(resumeObject) {
     	});
 	});
 
-
+	if(resumeObject.basics && resumeObject.basics.email && useGravatar) {
+		resumeObject.basics.gravatar = gravatar.url(resumeObject.basics.email, {
+                        s: '100',
+                        r: 'pg',
+                        d: 'mm'
+                    });
+	}
 	resumeObject.profiles = {};
 
 	_.each(resumeObject.basics.profiles, function(profile){
