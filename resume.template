@@ -42,10 +42,17 @@
       }
       p, strong, li, body {
         color: #999 !important;
-        font-size: 0.8em;
+        font-size: 1.5em;
+        line-height: 1.8em;
       }
       h4.institution-name {
           color: #999 !important;
+      }
+      h3 {
+        font-size: 3em;
+      }
+      hr {
+        visibility: hidden;
       }
     }
 
@@ -58,7 +65,7 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <div class="row">
-        <div class="col-md-6 col-sm-12">
+        <div class="col-md-12 col-sm-12">
           <img class="media-object img-circle pull-right" data-src="holder.js/64x64" alt="64x64" src="{{basics.picture}}" style="width: 100px; height: 100px; margin-top: 5px;">
 	        <h1>{{basics.name}}<h1>
 	        <h2>{{basics.location.city}}</h2>
