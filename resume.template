@@ -80,15 +80,15 @@
         {{#basics.email}}
         <p class="basics-contact"><strong>Email:</strong> {{basics.email}}</p>
         {{/basics.email}}
-        {{#profiles.twitter}}
-        <p class="basics-contact"><strong>Twitter:</strong> <a href="http://twitter.com/{{.}}">{{.}}</a></p>
-        {{/profiles.twitter}}
-        {{#profiles.vimeo}}
-        <p class="basics-contact"><strong>Vimeo:</strong> <a href="http://vimeo.com/{{.}}">{{.}}</a></p>
-        {{/profiles.vimeo}}<hr />
-        {{#profiles.github}}
-        <p class="basics-contact"><strong>Github:</strong> <a href="http://github.com/{{.}}">{{.}}</a></p>
-        {{/profiles.github}}<hr />
+        {{#basics.website}}
+        <p class="basics-contact"><strong>Website:</strong> {{basics.website}}</p>
+        {{/basics.email}}
+        {{#profiles.length}}
+          {{#profiles}}
+          <p class="basics-contact"><strong>{{network}}:</strong> <a href="{{url}}">{{url}}</a></p>
+          {{/profiles}}
+        {{/profiles.length}}
+        <hr />
         </div>
       </section>
       {{#work.length}}
