@@ -82,7 +82,7 @@
         {{/basics.email}}
         {{#basics.website}}
         <p class="basics-contact"><strong>Website:</strong> {{basics.website}}</p>
-        {{/basics.email}}
+        {{/basics.website}}
         {{#profiles.length}}
           {{#profiles}}
           <p class="basics-contact"><strong>{{network}}:</strong> <a href="{{url}}">{{url}}</a></p>
