@@ -42,6 +42,7 @@
       }
       p, strong, li, body {
         color: #999 !important;
+        font-size: 0.8em;
       }
       h4.institution-name {
           color: #999 !important;
@@ -58,14 +59,10 @@
     <div class="col-md-8 col-md-offset-2">
       <div class="row">
         <div class="col-md-6 col-sm-12">
+          <img class="media-object img-circle pull-right" data-src="holder.js/64x64" alt="64x64" src="{{basics.picture}}" style="width: 100px; height: 100px; margin-top: 5px;">
 	        <h1>{{basics.name}}<h1>
 	        <h2>{{basics.location.city}}</h2>
         </div>
-        {{#basics.picture}}
-        <div class="col-md-6 col-sm-12">
-	        <img class="media-object img-circle pull-right" data-src="holder.js/64x64" alt="64x64" src="{{basics.picture}}" style="width: 100px; height: 100px; margin-top: 20px;">
-  	    </div>
-  		  {{/basics.picture}}
         </div>
       <hr />
       <section class="row">
@@ -81,7 +78,7 @@
         <p class="basics-contact"><strong>Email:</strong> <a href="mailto:{{basics.email}}">{{basics.email}}</a></p>
         {{/basics.email}}
         {{#basics.website}}
-        <p class="basics-contact"><strong>Website:</strong> <a href="{{basics.website}}">{{basics.website}}</a><br></p>
+        <p class="basics-contact"><strong>Website:</strong> <a href="{{basics.website}}">{{basics.website}}</a></p>
         {{/basics.website}}
         <br>
         {{#basics.profiles.length}}
